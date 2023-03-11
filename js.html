@@ -137,6 +137,8 @@
             console.log("expr 1: ",("5"==5))//igual en valor
             console.log("expr 2: ",("5"===5))//igual en valor y tipo de variable
 
+            console.log("-------------------funciones-------------------")
+
             function validarEdad(edad){
                 if (edad >= 18)
                     console.log("Es mayor de edad")
@@ -170,6 +172,49 @@
            /* console.log("Hola "+nombrePersona+"!!!")
             console.log("Hola "+nombreMascota+"!!!")
             console.log(nombrePersona+" tiene "+edad+" años")*/
+
+            console.log("---------------------POO---------------------")
+
+            class Persona{
+                nombre = ""
+                apellido = ""
+                edad = 0
+                email = ""
+
+                getNombreCompleto(){
+                    return this.nombre+" "+this.apellido
+                }
+
+                esMayorEdad(){
+                    return this.edad>=18? "Si" : "No"
+                }
+            }
+
+            let persona1 = new Persona()
+            persona1.nombre = "Johan"
+            persona1.apellido = "Fonseca"
+            persona1.edad = 30
+
+            console.log("Nombre de la persona:",persona1.getNombreCompleto())
+            console.log("¿Es mayor de edad?", persona1.esMayorEdad())
+
+            class Estudiante extends Persona {
+                codigo = ""
+                cantidadMaterias = 0
+            }
+
+            class Docente extends Persona {
+                codigo = ""
+            }
+
+            let estudiante1 = new Estudiante()
+            estudiante1.nombre = "Mauricio"
+            estudiante1.apellido = "Fonseca"
+            estudiante1.codigo = "123456"
+            estudiante1.cantidadMaterias = 7
+            
+            console.log("Nombre de la persona:",estudiante1.getNombreCompleto())
+
         </script>
     </body>
 </html>
